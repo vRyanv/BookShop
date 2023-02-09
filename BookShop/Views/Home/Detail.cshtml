@@ -4,8 +4,30 @@
 }
 
 @section Styles{
-    <link href="~/css/share/animation-loading.css" asp-append-version="true" />
+    <link href="~/css/share/animation-loading.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/customer/detail-product.css" rel="stylesheet" asp-append-version="true" />
 }
+
+<div class="wrapper">
+    <div class="product-img">
+        <img src="/img/book/book_demo.jpg" height="420" width="327">
+    </div>
+    <div class="product-info">
+        <div class="product-text">
+            <h1>Book title</h1>
+            <h2 style="color:rgb(32, 50, 71)">by Author</h2>
+            <p>Category: cateName </p>
+            <p>Supplier: SupName  </p>
+            <p>Publishing date: 11/11/1111  </p>
+            <p>quantity: 1</p>
+            <p style="text-align: justify;">A book description is a short summary of a book's story or content that is designed to “hook” a reader and lead to a sale. Typically, the book's description conveys important information about its topic</p>
+        </div>
+        <div class="product-price-btn">
+            <p><span>78</span>$</p>
+            <button type="button">Add to cart</button>
+        </div>
+    </div>
+</div>
 
 @section Scripts{
 

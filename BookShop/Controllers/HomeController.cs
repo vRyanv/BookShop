@@ -23,6 +23,11 @@ namespace BookShop.Controllers
             return View();
         }
 
+        public IActionResult Detail(int id)
+        {
+            return View();
+        }
+
         public IActionResult Login()
         {
             return View();
