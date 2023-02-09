@@ -5,7 +5,6 @@
 
 @section Styles{
     <link href="~/css/share/animation-loading.css" asp-append-version="true"/>
-    <link href="~/css/share/animation-loading.css" asp-append-version="true"/>
 }
 
 <partial name="_AnimationLoading" />
@@ -36,7 +35,7 @@
             {
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="box">
-                        <a>
+                        <a asp-controller="Home" asp-action="detail" asp-route-id="1">
                             <div class="img-box">
                                 <img src="~/img/book/book_demo.jpg" alt="">
                             </div>

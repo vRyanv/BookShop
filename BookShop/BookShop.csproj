@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Book\" />
-    <Folder Include="wwwroot\css\admin\" />
     <Folder Include="wwwroot\img\deco\" />
     <Folder Include="wwwroot\img\book\" />
     <Folder Include="wwwroot\lib\owl-carousel\js\" />
