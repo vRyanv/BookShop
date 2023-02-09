@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Book\" />
+    <Folder Include="wwwroot\css\admin\" />
+    <Folder Include="wwwroot\img\deco\" />
+    <Folder Include="wwwroot\img\book\" />
+    <Folder Include="wwwroot\lib\owl-carousel\js\" />
+  </ItemGroup>
+
+</Project>
