@@ -8,5 +8,10 @@ namespace BookShop.Controllers
         {
             return View("~/Views/Statistic/Statistic.cshtml");
         }
+
+        public IActionResult SupperAdmin()
+        {
+            return View("~/Views/SupperAdmin/Index.cshtml");
+        }
     }
 }
