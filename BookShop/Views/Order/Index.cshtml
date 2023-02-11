@@ -30,55 +30,13 @@
                 <td>$123</td>
                 <td>11/11/1111</td>
                 <td>
-                    <button class="btn btn-info" data-pro-id="@i" data-bs-toggle="modal" data-bs-target="#order_detail_model">Detail</button>
+                    <a asp-controller="Order" asp-action="Detail">
+                        <button class="btn btn-info" data-pro-id="@i">Detail</button>
+                    </a>
+
                 </td>
             </tr>
         }
 
     </tbody>
 </table>
-
-<div class="modal fade" id="order_detail_model" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
-    <div class="modal-dialog  modal-dialog-centered " style="max-width: 68rem;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Order detail</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <table class="table table-hover pt-10">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Image</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Total price</th>
-                        </tr>
-                    </thead>
-                    <tbody id="body-order-detail-table">
-                        @for (int i = 0; i < 5; i++)
-                        {
-                            <tr>
-                                <th scope="row">@(i + 1)</th>
-                                <th>book title</th>
-                                <th>
-                                    <img src="~/img/book/book_demo.jpg" style="width:8rem; height:9rem"/>
-                                </th>
-                                <th>$123</th>
-                                <th>1</th>
-                                <th>$123</th>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <div>
-                    <p id="total_price_order_detail" style="text-align: center; color: mediumpurple; font-weight: bold"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

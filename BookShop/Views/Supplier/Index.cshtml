@@ -7,7 +7,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="d-flex" id="search_box_product" role="search">
-                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#new_sup_model" style="width: 8rem;margin-left: 2rem">New</button></a>
+                    <a asp-controller="Supplier" asp-action="Create"> 
+                        <button class="btn btn-warning" style="width: 8rem;margin-left: 2rem">New</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -18,7 +20,8 @@
         <thead>
             <tr>
                 <th scope="col">No.</th>
-                <th scope="col">Supplier name</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -28,8 +31,12 @@
                 <tr>
                     <th scope="row">@(i+1)</th>
                     <td>Supp name @i</td>
+                    <td> supp address @i</td>
                     <td>
-                        <button class="btn btn-info" data-pro-id="@i">Update</button>
+                        <a asp-controller="Supplier" asp-action="Edit">
+                            <button class="btn btn-info" data-pro-id="@i">Update</button>
+                        </a>
+                        
                         <button class="btn btn-danger btn-delete-pro" data-pro-id="@i">Delete</button>
                     </td>
                 </tr>
@@ -39,27 +46,3 @@
         </tbody>
     </table>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="new_sup_model" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
-    <div class="modal-dialog  modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Supplier</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form action="/supplier-add" method="post" id="sup_form">
-                <div class="modal-body">
-                    <label for="txt_sup_name">Supplier name</label>
-                    <input type="text" placeholder="supplier name" id="txt_sup_name" class="form-control mb-1" required>
-                    <label for="txt_address">Address</label>
-                    <input type="text" placeholder="supplier address" id="txt_address" class="form-control" required>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Add</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
